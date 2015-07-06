@@ -5,3 +5,11 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+Project.create(:name =>"GQ", :description => "Fashion")
+Project.create(:name =>"National Geographic", :description => "Awesome travel magazine")
+Project.create(:name =>"Surfer", :description => "Best magazine")
+Project.create(:name =>"Rock and Ice", :description => "Rock climbing magazine")
+Project.create(:name =>"Rodales", :description => "Scuba magazine")
+Project.create(:name =>"Economist", :description => "Best econimics magazine")
