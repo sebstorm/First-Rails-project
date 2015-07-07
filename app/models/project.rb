@@ -5,4 +5,5 @@ class Project < ActiveRecord::Base
 	def self.last_created(number)
 		Project.order(:created_at => :desc).limit(number)
 	end
+	
 end
