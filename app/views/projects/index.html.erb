@@ -1,0 +1,15 @@
+<h1>Projects</h1>
+<p>My projetcs</p>
+
+<ul>
+	<% @projects.each do |pr| %>
+	<li>
+		<%=pr.name %>
+			<% if pr.description? %>
+				<%= "-" %>
+				<%=pr.description %>
+			<% end %>
+		
+	</li>
+	<% end %>
+</ul>
