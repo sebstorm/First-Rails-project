@@ -1,0 +1,22 @@
+
+<p>Entries for: </p>
+
+<h1>
+<%= @pr.name %>
+</h1>
+
+<ul>
+	<% @entries.each do |entr| %>
+		<li>
+		<%= entr.hours %>h
+	 	<%= entr.minutes %>m
+	 	- <%= entr.date %>
+	 	(<%= entr.comment %>)
+	 	</li>
+	<% end %>
+</ul>
+
+	<h3>
+	Total hours this month are:
+	<%= @month_hours %>
+	</h3>

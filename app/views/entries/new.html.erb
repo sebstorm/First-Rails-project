@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+
+		<h1>
+			New entry for
+			<%= @pr.name %>
+		</h1>
+
+
+
+		<%= form_for([@pr, @entr]) do |frm| %>
+			<div class="form-group">
+				<%= frm.label(:hours) %>
+				<%= frm.text_field(:hours, :class => "form-control") %>
+			</div>
+			<div class="form-group">
+				<%= frm.label(:minutes) %>
+				<%= frm.text_field(:minutes, :class => "form-control") %>
+			</div>
+			<div class="form-group">
+				<%= frm.label(:date) %>
+				<%= frm.text_field(:date, :class => "form-control") %>
+			</div>
+			<br>
+
+			<button type="submit">Create New Entry</button>
+		<% end %>
+	</body>
+</html>
+
+
+
+
+
