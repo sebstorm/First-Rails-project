@@ -7,11 +7,14 @@
 
 <ul>
 	<% @entries.each do |entr| %>
+		
 		<li>
+		<a href="<%= edit_project_entry_path(@pr, entr) %>">
 		<%= entr.hours %>h
 	 	<%= entr.minutes %>m
 	 	- <%= entr.date %>
 	 	(<%= entr.comment %>)
+	 	</a>
 	 	</li>
 	<% end %>
 </ul>
@@ -19,5 +22,10 @@
 	<h3>
 	Total hours this month are:
 	<%= @month_hours %>
-	<% end %>
+
 	</h3>
+
+
+
+	<a href="<%= new_project_entry_path %>" >Add a new entry</a> 
+

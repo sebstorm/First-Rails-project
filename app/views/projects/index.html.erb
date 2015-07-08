@@ -4,7 +4,13 @@
 <ul>
 	<% @projects.each do |pr| %>
 	<li>
+		<a href="<%= project_entries_path(pr) %>">
 		<%=pr.name %>
+		</a>
+
+
+
+
 			<% if pr.description? %>
 				<%= "-" %>
 				<%=pr.description %>

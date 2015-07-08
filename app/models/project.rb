@@ -22,19 +22,19 @@ class Project < ActiveRecord::Base
 		self.entries.where("date > ?", start ).where("date < ?", cutoff)
 	end
 
-	def total_hours_in_month(month, year)
+	def total_hours_in_month(year, month)
 
-		if self.entries != nil
+		# if self.entries != nil
 		hours = entries.reduce(0) do |sum, entry|
 				sum + entry.hours
 			end
 		minutes = entries.reduce(0) do |sum, entry|	
 				sum + entry.minutes
 			end
-			return hours + (minutes)/60.0
-		else
-			return
-		end
+			return hours + minutes/60.0
+		# else
+		# 	return
+		# end
 	end
 
 

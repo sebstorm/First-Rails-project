@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+
+		<h1>
+			Edit entry
+			<%= @pr.name %>
+		</h1>
+			
+		<% if @entr.errors.any? %>
+			<ul>
+				<% @entr.errors.full_messages.each do |err| %>
+				<li><%= err %></li>
+				<% end %>
+			</ul>
+		<% end %>
+
+
+		<%= form_for([@pr, @entr]) do |frm| %>
+			<div class="form-group">
+				<%= frm.label(:hours) %>
+				<%= frm.text_field(:hours, :class => "form-control") %>
+			</div>
+			<div class="form-group">
+				<%= frm.label(:minutes) %>
+				<%= frm.text_field(:minutes, :class => "form-control") %>
+			</div>
+			<div class="form-group">
+				<%= frm.label(:date) %>
+				<%= frm.date_field(:date, :class => "form-control") %>
+			</div>
+			<br>
+
+			<button type="submit">Create New Entry</button>
+		<% end %>
+	</body>
+</html>
