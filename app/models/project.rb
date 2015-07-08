@@ -24,7 +24,7 @@ class Project < ActiveRecord::Base
 
 	def total_hours_in_month(month, year)
 
-		
+		if self.entries != nil
 		hours = entries.reduce(0) do |sum, entry|
 				sum + entry.hours
 			end
@@ -32,6 +32,9 @@ class Project < ActiveRecord::Base
 				sum + entry.minutes
 			end
 			return hours + (minutes)/60.0
+		else
+			return
+		end
 	end
 
 
