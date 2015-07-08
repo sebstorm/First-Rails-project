@@ -1,19 +1,22 @@
 Rails.application.routes.draw do
 
+  resources(:projects) do
+    resources(:entries)
+  end
 
-  get '/' => 'site#home'
+  # get '/' => 'site#home'
 
-  get '/contact' => "site#contact"
+  # get '/contact' => "site#contact"
 
-  get '/projects' => "projects#index"
+  # get '/projects' => "projects#index"
 
-  get '/projects/:id' => "projects#show"
+  # get '/projects/:id' => "projects#show"
 
-  get '/projects/:project_id/entries' => "entries#index"
+  # get '/projects/:project_id/entries' => "entries#index"
 
-  get '/projects/:project_id/entries/new' => "entries#new"
+  # get '/projects/:project_id/entries/new' => "entries#new"
 
-  post '/projects/:project_id/entries' => "entries#create", :as => "project_entries"
+  # post '/projects/:project_id/entries' => "entries#create", :as => "project_entries"
 
 
 
